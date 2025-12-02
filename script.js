@@ -10,6 +10,43 @@ $(function () {
     $("#myModal").fadeOut(200);
     $("#modalInnerContent").empty();
   });
+
+  var $inputs = $(".dev-tools input");
+  var $label = $(".dev-tools p");
+  var $button = $(".dev-tools button");
+
+  $button.on("click", onClick);
+
+  function onClick() {
+    if (inputsAreEmpty()) {
+      $label.text("Error: one or both inputs are empty.");
+      return;
+    }
+    updateLabel();
+  }
+
+  function inputsAreEmpty() {
+    if (getNumber1() === "" || getNumber2() === "") {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function updateLabel() {
+    var addend1 = getNumber1();
+    var addend2 = getNumber2();
+    var sum = parseInt(addend1) + parseInt(addend2);
+    $label.text(addend1 + " + " + addend2 + " = " + sum);
+  }
+
+  function getNumber1() {
+    return $inputs.eq(0).val();
+  }
+
+  function getNumber2() {
+    return $inputs.eq(1).val();
+  }
 });
 
 let notifyTimeout; // global timeout variable for notification
