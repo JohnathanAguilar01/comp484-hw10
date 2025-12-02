@@ -138,7 +138,7 @@ function renderPetCard(pet, petType) {
       <section class="pet-image-container">
         <img
           class="pet-image"
-          src="images/${petType}.png"
+          src="assets/${petType}.png"
         />
       </section>
       <section class="dashboard">
@@ -239,16 +239,16 @@ function addPet() {
 
       <div class="pet-choices">
         <button type="button" id="cat" class="pet-button">
-          <img src="images/cat.png" alt="Button" style="height:120px;">
+          <img src="assets/cat.png" alt="Button" style="height:120px;">
         </button>
         <button type="button" id="dog" class="pet-button">
-          <img src="images/dog.png" alt="Button" style="height:120px;">
+          <img src="assets/dog.png" alt="Button" style="height:120px;">
         </button>
         <button type="button" id="horse" class="pet-button">
-          <img src="images/horse.png" alt="Button" style="height:120px;">
+          <img src="assets/horse.png" alt="Button" style="height:120px;">
         </button>
         <button type="button" id="duck" class="pet-button">
-          <img src="images/duck.png" alt="Button" style="height:120px;">
+          <img src="assets/duck.png" alt="Button" style="height:120px;">
         </button>
       </div>
       <button type="submit" class="create-pet">Adopt</button>
